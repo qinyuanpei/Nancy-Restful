@@ -1,0 +1,11 @@
+E:\Projects\Nancy.Restful\Nancy.Greet\bin\Debug\Nancy.Greet.exe.config
+E:\Projects\Nancy.Restful\Nancy.Greet\bin\Debug\Nancy.Greet.exe
+E:\Projects\Nancy.Restful\Nancy.Greet\bin\Debug\Nancy.Greet.pdb
+E:\Projects\Nancy.Restful\Nancy.Greet\bin\Debug\Nancy.dll
+E:\Projects\Nancy.Restful\Nancy.Greet\bin\Debug\Nancy.Hosting.Self.dll
+E:\Projects\Nancy.Restful\Nancy.Greet\bin\Debug\Nancy.xml
+E:\Projects\Nancy.Restful\Nancy.Greet\bin\Debug\Nancy.Hosting.Self.xml
+E:\Projects\Nancy.Restful\Nancy.Greet\obj\Debug\Nancy.Greet.csprojResolveAssemblyReference.cache
+E:\Projects\Nancy.Restful\Nancy.Greet\obj\Debug\Nancy.Greet.exe
+E:\Projects\Nancy.Restful\Nancy.Greet\obj\Debug\Nancy.Greet.pdb
+E:\Projects\Nancy.Restful\Nancy.Greet\bin\Debug\Nancy.Greet.XML
