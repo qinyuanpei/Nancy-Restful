@@ -9,3 +9,5 @@ E:\Projects\Nancy.Restful\Nancy.Greet\obj\Debug\Nancy.Greet.csprojResolveAssembl
 E:\Projects\Nancy.Restful\Nancy.Greet\obj\Debug\Nancy.Greet.exe
 E:\Projects\Nancy.Restful\Nancy.Greet\obj\Debug\Nancy.Greet.pdb
 E:\Projects\Nancy.Restful\Nancy.Greet\bin\Debug\Nancy.Greet.XML
+E:\Projects\Nancy.Restful\Nancy.Greet\bin\Debug\Dapper.dll
+E:\Projects\Nancy.Restful\Nancy.Greet\bin\Debug\Dapper.xml
