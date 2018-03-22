@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Nancy.Caching.EF
 {
-    class CachingModel
+    public class CachingModel
     {
-        public string itemKey { get; set; }
+        public string ItemKey { get; set; }
         public string ItemValue { get; set; }
         public DateTime CreateTime { get; set; }
     }
