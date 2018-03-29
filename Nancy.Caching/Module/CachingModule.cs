@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Nancy.Caching.EF;
+using Nancy.Caching.SQLite;
 
 namespace Nancy.Caching.Module
 {

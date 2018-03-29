@@ -10,7 +10,7 @@ using Nancy.Caching;
 using Dapper;
 using Newtonsoft.Json;
 
-namespace Nancy.Caching.EF
+namespace Nancy.Caching.SQLite
 {
     class CachingRepository : ICachingRepository,IDisposable
     {
@@ -18,7 +18,7 @@ namespace Nancy.Caching.EF
 
         private string databse = string.Empty;
 
-        private int expireTime = 50000;
+        private int expireTime = 30;
 
         public CachingRepository(string fileName)
         {
@@ -33,14 +33,14 @@ namespace Nancy.Caching.EF
                 Directory.CreateDirectory(directory);
             this.conn = new SQLiteConnection(string.Format("Data Source={0};Version=3;New=False;Compress=True;Journal Mode=Off;", this.databse),true);
             conn.Open();
-                conn.Execute(@"CREATE TABLE IF NOT EXISTS tbCaching
-                    (
-                         ID INTEGER PRIMARY KEY Autoincrement,
-                         ItemKey VARCHAR(50) NOT NULL,
-                         ItemValue VARCHAR(500),
-                         CreateTime TEXT
-                    )"
-                );
+            conn.Execute(@"CREATE TABLE IF NOT EXISTS [tbCaching]
+                        (
+                            [ID] INTEGER PRIMARY KEY Autoincrement,
+                            [ItemKey] VARCHAR(50) NOT NULL,
+                            [ItemValue] VARCHAR(500),
+                            [CreateTime] TEXT
+                        )"
+            );
         }
 
         public void Dispose()
@@ -53,13 +53,13 @@ namespace Nancy.Caching.EF
         {
             if (!File.Exists(this.databse)) return null;
             var entry = conn.Query<CachingModel>(
-                "SELECT ItemKey, ItemValue, CreateTime FROM tbCaching WHERE ItemKey = \"@key\"", new { key }
+                "SELECT [ID], [ItemKey], [ItemValue], [CreateTime] FROM [tbCaching] WHERE [ItemKey] = @key", new { key }
             ).FirstOrDefault();
             if (entry == null) return null;
-            var expire = entry.CreateTime + TimeSpan.FromMilliseconds(expireTime);
+            var expire = entry.CreateTime + TimeSpan.FromMinutes(expireTime);
             if (DateTime.Now > expire)
             {
-                conn.Execute(@"DELETE FROM tbCaching WHERE ItemKey = @key", new { key });
+                conn.Execute(@"DELETE FROM [tbCaching] WHERE [ItemKey] = @key", new { key });
                 return null;
             }
 
@@ -70,16 +70,17 @@ namespace Nancy.Caching.EF
         {
             if (!File.Exists(this.databse)) return;
             var json = JsonConvert.SerializeObject(value);
+            var time = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
             var entry = conn.QueryFirstOrDefault<CachingModel>(
-                @"SELECT ItemKey, ItemValue, CreateTime 
-                FROM tbCaching 
-                WHERE ItemKey = @key", new { key }
+                @"SELECT [ItemKey], [ItemValue], [CreateTime] 
+                FROM [tbCaching] 
+                WHERE [ItemKey] = @key", new { key }
             );
 
             if(entry == null)
             {
                 conn.Execute(
-                    @"Insert INTO TBCaching(ItemKey,ItemValue) Values(@key,@json)",
+                     @"Insert INTO TBCaching(ItemKey,ItemValue,CreateTime) Values(@key,@json,@time)",
                     new { key, json }
                 );
             }
@@ -87,11 +88,7 @@ namespace Nancy.Caching.EF
             {
                 var expire = entry.CreateTime + TimeSpan.FromMilliseconds(expireTime);
                 if (DateTime.Now < expire) return;
-                conn.Execute(@"DELETE FROM tbCaching WHERE ItemKey = @key", new { key });
-                conn.Execute(
-                    @"Insert INTO TBCaching(ItemKey,ItemValue) Values(@key,@json)",
-                    new { key, json }
-                );
+                conn.Execute(@"UPDATE [tbCaching] SET [ItemValue] = @json, [CreateTime] = @time WHERE [ItemKey] = @key", new { json,time,key });
             }
         }
     }

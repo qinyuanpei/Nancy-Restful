@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nancy.Caching.EF
+namespace Nancy.Caching.SQLite
 {
     interface ICachingRepository
     {
