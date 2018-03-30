@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.Greet", "Nancy.Greet\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.Caching", "Nancy.Caching\Nancy.Caching.csproj", "{69029221-6BB3-43E0-8282-254D4F236173}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.OwinHost", "Nancy.OwinHost\Nancy.OwinHost.csproj", "{B91E5B25-E0CB-4E6D-B897-B57FF219818C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.IISHost", "Nancy.IISHost\Nancy.IISHost.csproj", "{A6CBFFB7-F176-405B-91D3-E3F367C0E324}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{69029221-6BB3-43E0-8282-254D4F236173}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69029221-6BB3-43E0-8282-254D4F236173}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69029221-6BB3-43E0-8282-254D4F236173}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B91E5B25-E0CB-4E6D-B897-B57FF219818C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B91E5B25-E0CB-4E6D-B897-B57FF219818C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B91E5B25-E0CB-4E6D-B897-B57FF219818C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B91E5B25-E0CB-4E6D-B897-B57FF219818C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6CBFFB7-F176-405B-91D3-E3F367C0E324}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6CBFFB7-F176-405B-91D3-E3F367C0E324}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6CBFFB7-F176-405B-91D3-E3F367C0E324}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6CBFFB7-F176-405B-91D3-E3F367C0E324}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
