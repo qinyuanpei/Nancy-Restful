@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@Model.Title</title>
+</head>
+    <body>
+    <h2>@Model.Description</h2>
+        <ul>
+            @foreach (var item in Model.Items)
+            {
+                <li>@item</li>
+            }
+        </ul>
+    </body>
+</html>

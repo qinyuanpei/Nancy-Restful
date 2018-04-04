@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.OwinHost", "Nancy.Owi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.IISHost", "Nancy.IISHost\Nancy.IISHost.csproj", "{A6CBFFB7-F176-405B-91D3-E3F367C0E324}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.Jwt", "Nancy.Jwt\Nancy.Jwt.csproj", "{7DDE2A24-B09E-4FC1-8A5C-EDC49915EA47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A6CBFFB7-F176-405B-91D3-E3F367C0E324}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6CBFFB7-F176-405B-91D3-E3F367C0E324}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6CBFFB7-F176-405B-91D3-E3F367C0E324}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DDE2A24-B09E-4FC1-8A5C-EDC49915EA47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DDE2A24-B09E-4FC1-8A5C-EDC49915EA47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DDE2A24-B09E-4FC1-8A5C-EDC49915EA47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DDE2A24-B09E-4FC1-8A5C-EDC49915EA47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

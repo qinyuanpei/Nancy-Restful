@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Nancy.Greet;
 using System.Collections.Concurrent;
 using Nancy.Greet.Models;
+using System.Threading;
 
 namespace Nancy.Greet.Module
 {
@@ -24,6 +25,7 @@ namespace Nancy.Greet.Module
             // GET: /api/Greet/
             Get[@"/Greet"] = _ =>
             {
+                Thread.Sleep(75000);
                 var data = new
                 {
                     URL = "/api/Greet",
