@@ -49,15 +49,14 @@ namespace Nancy.Jwt
             return token;
         }
 
-        public static ClaimsPrincipal GetPrincipal(string token)
+        public static ClaimsPrincipal ValidateToken(string token)
         {
             try
             {
                 var tokenHandler = new JwtSecurityTokenHandler();
                 var jwtToken = tokenHandler.ReadToken(token) as JwtSecurityToken;
 
-                if (jwtToken == null)
-                    return null;
+                if (jwtToken == null) return null;
 
                 var symmetricKey = Convert.FromBase64String(secretKey);
 
