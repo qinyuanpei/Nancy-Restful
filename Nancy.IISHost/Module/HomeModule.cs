@@ -9,7 +9,7 @@ namespace Nancy.IISHost.Module
     {
         public HomeModule() : base("/")
         {
-            Get["/"] = parameter =>
+            Get("/",parameter =>
             {
                 var data = new
                 {
@@ -19,7 +19,7 @@ namespace Nancy.IISHost.Module
                 };
 
                 return View["Views/Home/Index", data];
-            };
+            });
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Nancy.IISHost.Module
     {
         public IISModule() : base("/api")
         {
-            Get["/iis"] = _ =>
+            Get("/iis",_ =>
             {
                 var data = new
                 {
@@ -21,7 +21,7 @@ namespace Nancy.IISHost.Module
                     Description = "这是一个使用NancyFX开发的,运行在IIS上的Web API"
                 };
                 return Response.AsJson(data);
-            };
+            });
         }
     }
 }

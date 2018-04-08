@@ -42,8 +42,9 @@
     <Reference Include="Microsoft.Owin.Hosting">
       <HintPath>..\Packages\Microsoft.Owin.Hosting.4.0.0\lib\net451\Microsoft.Owin.Hosting.dll</HintPath>
     </Reference>
-    <Reference Include="Nancy">
-      <HintPath>..\Packages\Nancy.1.4.4\lib\net40\Nancy.dll</HintPath>
+    <Reference Include="Nancy, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.2.0.0-clinteastwood\lib\net452\Nancy.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Nancy.Owin">
       <HintPath>..\Packages\Nancy.Owin.1.4.1\lib\net40\Nancy.Owin.dll</HintPath>

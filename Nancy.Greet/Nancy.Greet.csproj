@@ -56,8 +56,8 @@
     <Reference Include="Microsoft.IdentityModel.Tokens">
       <HintPath>..\Packages\Microsoft.IdentityModel.Tokens.5.2.1\lib\net45\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
-    <Reference Include="Nancy, Version=1.4.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Nancy.1.4.4\lib\net40\Nancy.dll</HintPath>
+    <Reference Include="Nancy, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.2.0.0-clinteastwood\lib\net452\Nancy.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Nancy.Hosting.Self, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
@@ -78,7 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="JwtBearerAuthentication.cs" />
-    <Compile Include="JwtBearerAuthenticationConfiguration.cs" />
     <Compile Include="JwtBootstrapper.cs" />
     <Compile Include="Models\UserEntry.cs" />
     <Compile Include="Module\GreetModule.cs" />

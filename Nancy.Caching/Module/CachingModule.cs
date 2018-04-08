@@ -14,20 +14,20 @@ namespace Nancy.Caching.Module
         public CachingModule() : base("/api")
         {
             repository = new CachingRepository("caching.db");
-            Get["/Caching/{key}"] = parameter =>
+            Get("/Caching/{key}", parameter =>
             {
                 string key = parameter.key;
                 var value = repository.GetKey<string>(key);
                 return Response.AsJson(value);
-            };
+            });
 
-            Post["/Caching/{key}"] = parameter =>
+            Post("/Caching/{key}",parameter =>
             {
                 string key = parameter.key;
                 string value = Request.Form.value;
                 repository.SetKey<string>(key, value);
                 return Response.AsJson(new { Message = "更新成功" });
-            };
+            });
         }
     }
 }

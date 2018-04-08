@@ -12,7 +12,7 @@ namespace Nancy.Greet
     {
         protected override void ApplicationStartup(TinyIoCContainer container, IPipelines pipelines)
         {
-            pipelines.e
+            pipelines.EnableJwtBearerAuthentication();
         }
     }
 }

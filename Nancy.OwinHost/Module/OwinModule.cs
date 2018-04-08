@@ -11,7 +11,7 @@ namespace Nancy.OwinHost.Module
         public OwinModule() : base(@"/api")
         {
             // GET: /api/Greet/
-            Get[@"/Owin"] = _ =>
+            Get(@"/Owin", _ =>
             {
                 var data = new
                 {
@@ -22,7 +22,7 @@ namespace Nancy.OwinHost.Module
                     Description = "这是一个使用NancyFX开发,运行在Owin上的Web API"
                 };
                 return Response.AsJson(data);
-            };
+            });
         }
     }
 }
