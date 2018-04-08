@@ -23,7 +23,7 @@ namespace Nancy.Greet.Module
         /// </summary>
         public GreetModule() : base("/api")
         {
-            this.RequiresAuthentication();
+            //this.RequiresAuthentication();
 
             // GET: /api/Greet/
             Get(@"/Greet",_ =>

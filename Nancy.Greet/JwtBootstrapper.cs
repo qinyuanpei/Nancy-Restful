@@ -8,11 +8,11 @@ using Nancy.TinyIoc;
 
 namespace Nancy.Greet
 {
-    public class JwtBootstrapper : DefaultNancyBootstrapper
-    {
-        protected override void ApplicationStartup(TinyIoCContainer container, IPipelines pipelines)
-        {
-            pipelines.EnableJwtBearerAuthentication();
-        }
-    }
+    //public class JwtBootstrapper : DefaultNancyBootstrapper
+    //{
+    //    protected override void ApplicationStartup(TinyIoCContainer container, IPipelines pipelines)
+    //    {
+    //        pipelines.EnableJwtBearerAuthentication();
+    //    }
+    //}
 }

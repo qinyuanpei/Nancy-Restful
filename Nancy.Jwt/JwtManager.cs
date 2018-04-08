@@ -49,6 +49,11 @@ namespace Nancy.Jwt
             return token;
         }
 
+        /// <summary>
+        /// 验证令牌
+        /// </summary>
+        /// <param name="token">Token</param>
+        /// <returns></returns>
         public static ClaimsPrincipal ValidateToken(string token)
         {
             try
