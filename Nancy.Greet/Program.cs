@@ -22,7 +22,7 @@ namespace Nancy.Greet
             };
 
             //定义服务器地址及端口号
-            var baseURL = "http://localhost:4050";
+            var baseURL = "http://localhost:8000";
 
             //定义并启动Host
             using (var host = new NancyHost(config, new Uri(baseURL)))
