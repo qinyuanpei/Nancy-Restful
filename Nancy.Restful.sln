@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.Jwt", "Nancy.Jwt\Nanc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Jwt", "AspNet.Jwt\AspNet.Jwt.csproj", "{53130C0C-47AF-41EB-B810-63C2B824D272}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Owin.Jwt", "AspNet.Owin.Jwt\AspNet.Owin.Jwt.csproj", "{A0F76D30-94C0-40AD-B753-855B0DA5FD81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{53130C0C-47AF-41EB-B810-63C2B824D272}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53130C0C-47AF-41EB-B810-63C2B824D272}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53130C0C-47AF-41EB-B810-63C2B824D272}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0F76D30-94C0-40AD-B753-855B0DA5FD81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0F76D30-94C0-40AD-B753-855B0DA5FD81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0F76D30-94C0-40AD-B753-855B0DA5FD81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0F76D30-94C0-40AD-B753-855B0DA5FD81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
