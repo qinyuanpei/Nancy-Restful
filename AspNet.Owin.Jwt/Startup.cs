@@ -15,7 +15,8 @@ namespace AspNet.Owin.Jwt
     {
         public void Configuration(IAppBuilder app)
         {
-            var opts = new OAuthAuthorizationServerOptions()
+            //配置OAuth2 Server选项
+            var serverOpts = new OAuthAuthorizationServerOptions()
             {
                 AllowInsecureHttp = true,
                 Provider = new OAuthAuthorizationServerProvider(),
@@ -25,7 +26,15 @@ namespace AspNet.Owin.Jwt
                 AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(30),
             };
 
-            app.UseOAuthAuthorizationServer(opts);
+            //启用OAuth2 Server
+            app.UseOAuthAuthorizationServer(serverOpts);
+
+            ////配置
+            //var bearerOpts = new OAuthBearerAuthenticationOptions()
+            //{
+
+            //};
+            //app.UseOAuthBearerAuthentication(bearerOpts);
         }
     }
 }
