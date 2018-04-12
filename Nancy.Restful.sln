@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Jwt", "AspNet.Jwt\As
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Owin.Jwt", "AspNet.Owin.Jwt\AspNet.Owin.Jwt.csproj", "{A0F76D30-94C0-40AD-B753-855B0DA5FD81}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{61840FED-E759-4CB4-BCB9-3152F286164E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{A0F76D30-94C0-40AD-B753-855B0DA5FD81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0F76D30-94C0-40AD-B753-855B0DA5FD81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0F76D30-94C0-40AD-B753-855B0DA5FD81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61840FED-E759-4CB4-BCB9-3152F286164E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61840FED-E759-4CB4-BCB9-3152F286164E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61840FED-E759-4CB4-BCB9-3152F286164E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61840FED-E759-4CB4-BCB9-3152F286164E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

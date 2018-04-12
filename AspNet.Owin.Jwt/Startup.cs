@@ -23,7 +23,6 @@ namespace AspNet.Owin.Jwt
                 TokenEndpointPath = new PathString("/oauth/token"),
                 AuthorizeEndpointPath = new PathString("/oauth/authorize"),
                 AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(30),
-
             };
 
             app.UseOAuthAuthorizationServer(opts);
