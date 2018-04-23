@@ -9,12 +9,15 @@ namespace AspNet.Owin.Jwt
 {
     public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             var baseURL = "http://localhost:1234";
-            using (WebApp.Start<Startup>(baseURL))
+            var opts = new StartOptions(baseURL);
+            
+            using (WebApp.Start<Startup>(opts))
             {
                 Console.WriteLine(string.Format("Server is runing at {0}...", baseURL));
+                Console.ReadLine();
             }
         }
     }
